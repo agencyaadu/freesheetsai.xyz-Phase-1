@@ -1,8 +1,22 @@
 import { useState } from "react"
 import Logo from "../../assets/Logo.svg"
 const HeroIcon = () => {
+    const [tooltipVisible, setTooltipVisible] = useState(false);
     // Put the svg here
-    return <img src={Logo} alt="Logo" className="mx-auto" />
+    return <div className="relative inline-block">
+            <img 
+                src={Logo} 
+                alt="Logo" 
+                className="mx-auto cursor-pointer"
+                onMouseEnter={() => setTooltipVisible(true)}
+                onMouseLeave={() => setTooltipVisible(false)} 
+            />
+            {tooltipVisible && (
+                <div className="absolute bottom-full mb-2 w-32 p-2 text-center text-black bg-white rounded-md shadow-lg">
+                    Coming soon !
+                </div>
+            )}
+    </div>
 }
 
 const LandingPage = () => {
@@ -10,6 +24,7 @@ const LandingPage = () => {
     const [emailResponse, setEmailResponse] = useState("");
     const [emailSubmitted, setEmailSubmitted] = useState(false);
     const EMAIL_COLLECTOR_URL = import.meta.env.VITE_FREE_SHEETS_EMAIL_COLLECTOR_SCRIPT
+    
     const emailHandler = async () => {
         // Write the function logic with what you want to do with the email
         try {
@@ -35,11 +50,13 @@ const LandingPage = () => {
   return (
     <div className="h-full w-full flex justify-center items-center">
         <main className="mx-4">
-            <HeroIcon />
+            <div className="flex justify-center items-center">
+                <HeroIcon />
+            </div>
             {!emailSubmitted ? (
                 <>
-                    <h1 className="text-text text-4xl mx-4 mb-6 text-center font-bold">Making your lives easier  <span className="text-text-light">❤️</span></h1>
-                    <section className="flex justify-between gap-x-2">
+                    <h1 className="text-text text-40px mb-4 text-center font-bold tracking-[-0.08em] w-[460px] mx-auto"> Making your lives easier  <span className="text-text-light">❤️</span></h1>
+                    <section className="flex justify-between gap-x-2 w-[460px] mx-auto">
                         <aside className="border rounded-md border-border flex grow overflow-clip">
                             <input type="email" value={email} className="outline-none grow border-none pl-3 py-2" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
                         </aside>
@@ -47,11 +64,11 @@ const LandingPage = () => {
                             Say thanks !
                         </button>
                     </section>
-                    <p className="  text-slate-500 mt-1.5">Enter your email address to get *rare* updates about our next drop !</p>
+                    <p className="text-[15px] leading-[20px] font-normal text-slate-500 mt-1.5 w-[460px] h-[20px] mx-auto">Enter your email address to get *rare* updates about our next drop !</p>
                 </>)
             :
                 (<div className="text-center mt-8">
-                    <h2 className="text-2xl font-semibold">Thanks for subscribing 🎉</h2>
+                    <h2 className="text-2xl font-semibold">{emailResponse}</h2>
                 </div>)
             }
             <footer className="mt-10 flex gap-x-1 ">

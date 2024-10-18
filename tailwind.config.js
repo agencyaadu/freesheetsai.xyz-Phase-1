@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '40px': '40px',
+      },
       colors:{
         text:{
           DEFAULT:"#2A2400",
