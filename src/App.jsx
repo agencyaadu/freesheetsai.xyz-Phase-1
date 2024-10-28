@@ -10,8 +10,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-and-conditions" element={<TermsOfService />} />
+            <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions/" element={<TermsOfService />} />
           </Routes>
         </Router>
       </div>
