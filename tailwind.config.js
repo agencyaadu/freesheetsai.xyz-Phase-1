@@ -12,7 +12,8 @@ export default {
       colors:{
         text:{
           DEFAULT:"#2A2400",
-          light:"#E8E8E8"
+          light:"#E8E8E8",
+          customGray: '#7f7d7b',
         },
         border:{
           DEFAULT:"#CBD5E1"
