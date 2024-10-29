@@ -3,7 +3,7 @@ import React from 'react';
 const PrivacyPolicy = () => {
     return (
         <div className="privacy-policy container mx-auto p-6 bg-white">
-            <h1 className="text-3xl font-bold mb-6 text-gray-800">Privacy Policy for sHelp</h1>
+            <h1 className="text-3xl font-bold mb-6 text-gray-800">Privacy Policy for freeSheetsAI.xyz Plugin – AI Integration with Google Sheets</h1>
             <p className="mb-4 text-gray-600"><strong>Effective Date:</strong> 1st Oct 2024</p>
             <p className="mb-4 text-gray-700">
                 This privacy policy explains how freeSheetsAI.xyz ("we," "us," or "our") collects, uses, and protects information obtained through the sHelp.fyi Google Sheets add-on (the "Add-On"), which interacts with the GROQ API and OpenAI API.
