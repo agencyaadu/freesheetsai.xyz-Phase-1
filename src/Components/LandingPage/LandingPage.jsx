@@ -89,8 +89,12 @@ const LandingPage = () => {
             <footer className="mt-10 flex  gap-x-1 ">
                 <Link to="/privacy-policy/" className="text-custormGray hover:underline">Privacy Policy</Link> | 
                 <Link to="/terms-and-conditions/" className="text-custormGray hover:underline">Terms and Conditions</Link> |
-                <Link to="/how-to/" className="text-custormGray hover:underline">How to</Link>
+                <Link to="/how-to/" className="text-custormGray hover:underline">How-to</Link>
             </footer>
+            {/* Pro Version Announcement */}
+            <div role="alert" class="mt-3 absolute bottom-0 right-0 flex justify-center w-full p-3 text-sm text-white bg-green-600 ">
+                pro version coming soon .
+            </div>
         </main>
     </div>
   )
