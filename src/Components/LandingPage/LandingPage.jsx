@@ -94,7 +94,7 @@ const LandingPage = () => {
             </footer>
             <div className="flex justify-end items-end mt-14">
         {alertVisible ? (
-            <div role="alert" class="mb-4 mt-20 h-24 relative justify-center items-center flex flex-col w-64 p-2 text-sm text-black bg-yellow-600 bg-opacity-20 rounded-md shadow-lg">
+            <div role="alert" class="mb-4 mt-20 h-24 relative justify-center items-center flex flex-col w-40 p-2 text-sm text-black bg-yellow-600 bg-opacity-20 rounded-md shadow-lg">
             <div>Pro version</div>
             <div>coming soon .</div>
             <button 
