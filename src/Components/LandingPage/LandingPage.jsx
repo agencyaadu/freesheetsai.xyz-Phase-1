@@ -94,7 +94,7 @@ const LandingPage = () => {
             </footer>
             <div className="flex justify-end items-end mt-14">
         {alertVisible ? (
-            <div role="alert" class="mb-4 mt-20 h-24 relative justify-center items-center flex flex-col w-40 p-2 text-sm text-black bg-yellow-600 bg-opacity-20 rounded-md shadow-lg">
+            <div role="alert" class="mb-4 mt-32 h-28 relative justify-center items-center flex flex-col w-32 p-0 text-sm text-black bg-[#ffd563] bg-opacity-10 rounded-md shadow-sm">
             <div>Pro version</div>
             <div>coming soon .</div>
             <button 
@@ -105,7 +105,7 @@ const LandingPage = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>) : (
-            <div className="mb-4 mt-20 h-24 relative justify-center items-center flex w-80 p-3 text-sm text-white rounded-md"></div>
+            <div className="mb-4 mt-32 h-24 relative justify-center items-center flex w-80 p-0 text-sm text-white rounded-md"></div>
           )
         }
         </div>
