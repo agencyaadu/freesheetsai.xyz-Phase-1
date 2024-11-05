@@ -25,6 +25,7 @@ const LandingPage = () => {
     const [email,setEmail] = useState("");
     const [emailResponse, setEmailResponse] = useState("");
     const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const [alertVisible, setAlertVisible] = useState(true);
     const EMAIL_COLLECTOR_URL = import.meta.env.VITE_FREE_SHEETS_EMAIL_COLLECTOR_SCRIPT
     
     const emailHandler = async () => {
@@ -51,7 +52,7 @@ const LandingPage = () => {
 
   return (
     <div className="h-full w-full flex justify-center items-center">
-        <main className="mx-4">
+        <main className="mt-44 flex flex-col">
             <div className="flex justify-center items-center">
                 <HeroIcon />
             </div>
@@ -91,11 +92,28 @@ const LandingPage = () => {
                 <Link to="/terms-and-conditions/" className="text-custormGray hover:underline">Terms and Conditions</Link> |
                 <Link to="/how-to/" className="text-custormGray hover:underline">How-to</Link>
             </footer>
-            {/* Pro Version Announcement */}
-            <div role="alert" class="mt-3 absolute bottom-0 right-0 flex justify-center w-full p-3 text-sm text-white bg-green-600 ">
-                pro version coming soon .
-            </div>
+            <div className="flex justify-end items-end mt-14">
+        {alertVisible ? (
+            <div role="alert" class="mb-4 mt-20 h-24 relative justify-center items-center flex flex-col w-64 p-2 text-sm text-black bg-yellow-600 bg-opacity-20 rounded-md shadow-lg">
+            <div>Pro version</div>
+            <div>coming soon .</div>
+            <button 
+                class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" 
+                type="button"
+                onClick={() => setAlertVisible(false)}
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>) : (
+            <div className="mb-4 mt-20 h-24 relative justify-center items-center flex w-80 p-3 text-sm text-white rounded-md"></div>
+          )
+        }
+        </div>
         </main>
+        
+            {/* Pro Version Announcement
+                <div className="pt-10 absolute bottom-0 right-0">
+                    </div> */}
     </div>
   )
 }
