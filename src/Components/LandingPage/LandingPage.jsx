@@ -86,7 +86,7 @@ const LandingPage = () => {
                         <small className="text-[8px] text-[#DADADA] ">6/196 , Thohtiyankadu , 639136 , IN</small>
                     </aside>
             </div>    
-            <footer className="mt-10 flex gap-x-1 ">
+            <footer className="mt-10 flex  gap-x-1 ">
                 <Link to="/privacy-policy/" className="text-custormGray hover:underline">Privacy Policy</Link> | 
                 <Link to="/terms-and-conditions/" className="text-custormGray hover:underline">Terms and Conditions</Link> |
                 <Link to="/how-to/" className="text-custormGray hover:underline">How to</Link>
