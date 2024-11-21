@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Logo from "../../assets/Logo.svg"
+import Logo from "../../assets/Logo1.png"
 import { Link } from "react-router-dom";
 
 const HeroIcon = () => {
