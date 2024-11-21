@@ -70,9 +70,12 @@ const LandingPage = () => {
                     <p className="text-[15px] leading-[20px] font-normal text-slate-500 mt-1.5 w-[460px] h-[20px] mx-auto">Enter your email address to get *rare* updates about our next drop !</p>
                 </>)
             :
-                (<div className="text-center mt-8">
+                (<>
+                <div className="text-center mt-8">
                     <h2 className="text-2xl font-semibold">{emailResponse}</h2>
-                </div>)
+                </div>
+                </>
+                )
             }
             <div className="mt-10 flex gap-x-1">
                 <section className="flex items-center gap-x-1.5 px-1.5 py-[3.2px] border-[#F3F3F3]" style={{borderWidth:"0.48px"}}>
@@ -83,8 +86,8 @@ const LandingPage = () => {
                         </svg>
                     </section>
                     <aside className="flex flex-col gap-y-0.5 px-1.5 py-[3.2px] border-[#F3F3F3] sm:grow" style={{borderWidth:"0.48px"}}>
-                        <h3 className="text-[10px] text-[#DADADA] font-bold">freddy@aadu.agency</h3>
-                        <small className="text-[8px] text-[#DADADA] ">6/196 , Thohtiyankadu , 639136 , IN</small>
+                        <h3 className="text-[14px] text-[#DADADA] font-bold">freddy@aadu.agency</h3>
+                        <small className="text-[10px] text-[#DADADA] ">6/196 , Thohtiyankadu , 639136 , IN</small>
                     </aside>
             </div>    
             <footer className="mt-10 flex  gap-x-1 ">
@@ -94,18 +97,18 @@ const LandingPage = () => {
             </footer>
             <div className="flex justify-end items-end mt-14">
         {alertVisible ? (
-            <div role="alert" class="mb-4 mt-32 h-28 relative justify-center items-center flex flex-col w-32 p-0 text-sm text-black bg-[#ffd563] bg-opacity-10 rounded-md shadow-sm">
+            <div role="alert" className="mb-4 mt-32 h-32 relative justify-center items-center flex flex-col w-52 p-0 text-sm text-black bg-[#ffd563] bg-opacity-10 rounded-md shadow-sm">
             <div>Pro version</div>
             <div>coming soon .</div>
             <button 
-                class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-slate-300 hover:bg-slate-300/10 active:bg-slate-300/10 absolute top-1.5 right-1.5" 
+                className="flex items-center justify-center transition-all w-8 h-8 rounded-md text-slate-300 hover:bg-slate-300/10 active:bg-slate-300/10 absolute top-1.5 right-1.5" 
                 type="button"
                 onClick={() => setAlertVisible(false)}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>) : (
-            <div className="mb-4 mt-32 h-28 relative justify-center items-center flex w-80 p-0 text-sm text-white rounded-md"></div>
+            <div className="mb-4 mt-32 h-32 relative justify-center items-center flex w-52 p-0 text-sm text-white rounded-md"></div>
           )
         }
         </div>
