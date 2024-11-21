@@ -87,7 +87,7 @@ const LandingPage = () => {
                     </section>
                     <aside className="flex flex-col gap-y-0.5 px-1.5 py-[3.2px] border-[#F3F3F3] sm:grow" style={{borderWidth:"0.48px"}}>
                         <h3 className="text-[14px] text-[#DADADA] font-bold">freddy@aadu.agency</h3>
-                        <small className="text-[10px] text-[#DADADA] ">6/196 , Thohtiyankadu , 639136 , IN</small>
+                        <small className="text-[10px] text-[#DADADA] ">6/196 , Thotiyankadu , 639136 , IN</small>
                     </aside>
             </div>    
             <footer className="mt-10 flex  gap-x-1 ">
