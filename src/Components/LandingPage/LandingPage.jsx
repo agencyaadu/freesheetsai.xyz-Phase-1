@@ -95,7 +95,7 @@ const LandingPage = () => {
                 <Link to="/terms-and-conditions/" className="text-custormGray hover:underline">Terms and Conditions</Link> |
                 <Link to="/how-to/" className="text-custormGray hover:underline">How-to</Link>
             </footer>
-            <div className="flex justify-end items-end mt-14">
+            <div className="flex justify-center items-center mt-14">
         {alertVisible ? (
             <div role="alert" className="mb-4 mt-32 h-32 relative justify-center items-center flex flex-col w-52 p-0 text-sm text-black bg-[#ffd563] bg-opacity-10 rounded-md shadow-sm">
             <div>Pro version</div>
