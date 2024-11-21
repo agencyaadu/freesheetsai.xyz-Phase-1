@@ -25,7 +25,7 @@ const HowTo = () => {
         </Link>
     </div>
 
-    <h1 className="text-3xl font-bold mb-6 text-gray-800">What/Who/How to for freeSheetsAI.xyz Plugin – AI Integration with Google Sheets</h1>
+    <h1 className="text-3xl font-bold mb-6 text-gray-800">What / Who / How / Why | freeSheetsAI</h1>
 
     <div className="flex flex-col mb-4">
       {/* <h2 className="text-2xl font-semibold mb-4 text-gray-800" >What is it and why use it ?</h2> */}
