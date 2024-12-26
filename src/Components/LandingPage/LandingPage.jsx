@@ -4,20 +4,28 @@ import { Link } from "react-router-dom";
 
 const HeroIcon = () => {
     const [tooltipVisible, setTooltipVisible] = useState(false);
+    const addonLink = "https://workspace.google.com/marketplace/app/freesheetsai/351439192813"
     // Put the svg here
     return <div className="relative inline-block">
-            <img 
-                src={Logo} 
-                alt="Logo" 
-                className="mx-auto cursor-pointer"
-                onMouseEnter={() => setTooltipVisible(true)}
-                onMouseLeave={() => setTooltipVisible(false)} 
-            />
-            {tooltipVisible && (
-                <div className="absolute bottom-full mb-2 w-32 p-2 text-center text-black bg-white rounded-md shadow-lg">
-                    Coming soon !
-                </div>
-            )}
+            <a
+                href={addonLink}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <img 
+                    src={Logo} 
+                    alt="Logo" 
+                    className="mx-auto cursor-pointer"
+                    onMouseEnter={() => setTooltipVisible(true)}
+                    onMouseLeave={() => setTooltipVisible(false)} 
+                    />
+            </a>
+                {tooltipVisible && (
+                    <div className="absolute bottom-full mb-2 w-32 p-2 text-center text-black bg-white rounded-md shadow-lg">
+                        LIVE NOW !
+                    </div>
+                )}
     </div>
 }
 
