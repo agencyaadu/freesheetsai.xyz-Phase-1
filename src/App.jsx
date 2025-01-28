@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy"
 import TermsOfService from "./Components/TOS/TOS"
 import HowTo from "./Components/HowTo/HowTo"
+import ModelsTable from "./Components/Models/Models";
+import Docs from "./Components/Docs/Docs";
 
 function RedirectToExternal() {
   useEffect(() => {
@@ -24,6 +26,8 @@ function App() {
             <Route path="/terms-and-conditions/" element={<TermsOfService />} />
             <Route path="/how-to/" element={<HowTo />} />
             <Route path="/app/" element={<RedirectToExternal />} />
+            <Route path="/models" element={<ModelsTable />} />
+            <Route path="/docs" element={<Docs />} />
           </Routes>
         </Router>
       </div>
